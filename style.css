@@ -1,0 +1,363 @@
+/* =========================================
+   1. VARIABLES Y CONFIGURACIÓN GENERAL
+   ========================================= */
+:root {
+  --primary-color: #2563eb;       /* Azul brillante para botones/enlaces */
+  --primary-hover: #1d4ed8;       /* Azul más oscuro para hover */
+  --dark-bg: #1e293b;             /* Fondo oscuro (Header/Footer) */
+  --light-bg: #f8fafc;            /* Gris muy claro para fondos alternos */
+  --white: #ffffff;
+  --text-main: #334155;           /* Gris oscuro para texto */
+  --text-light: #94a3b8;          /* Gris claro para textos secundarios */
+  
+  /* Espaciado y Bordes */
+  --border-radius: 8px;
+  --box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  
+  /* Fuentes */
+  --font-main: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-main);
+  color: var(--text-main);
+  line-height: 1.6;
+  background-color: var(--white);
+}
+
+/* Clases de utilidad */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-padding {
+  padding: 80px 0;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: var(--dark-bg);
+  margin-bottom: 40px;
+  text-align: center;
+  position: relative;
+}
+
+/* Línea decorativa bajo los títulos */
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: var(--primary-color);
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* =========================================
+   2. HEADER Y NAVEGACIÓN
+   ========================================= */
+.site-header {
+  background-color: var(--dark-bg);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: var(--white);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #cbd5e1;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.main-nav a:hover, .main-nav a.active {
+  color: var(--white);
+}
+
+.btn-nav {
+  background-color: var(--primary-color);
+  color: white !important;
+  padding: 8px 16px;
+  border-radius: var(--border-radius);
+}
+
+.btn-nav:hover {
+  background-color: var(--primary-hover);
+}
+
+/* =========================================
+   3. SECCIÓN HERO (INICIO)
+   ========================================= */
+.hero-section {
+  background-color: var(--light-bg);
+  text-align: center;
+  padding: 100px 20px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  color: var(--dark-bg);
+  margin-bottom: 20px;
+}
+
+.hero-text {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto 30px auto;
+  color: var(--text-main);
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  margin-left: 10px;
+}
+
+.btn-outline:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* =========================================
+   4. SECCIÓN SOBRE MÍ (ESTILO TECH/CYBER)
+   ========================================= */
+#sobre-mi {
+  /* Fondo degradado oscuro profesional */
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  color: var(--white);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Línea decorativa superior */
+#sobre-mi::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-color), #60a5fa);
+}
+
+#sobre-mi .section-title {
+  color: var(--white);
+}
+
+#sobre-mi .section-title::after {
+  background-color: var(--primary-color);
+}
+
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+}
+
+/* =========================================
+   5. SECCIÓN PROYECTOS
+   ========================================= */
+.bg-light {
+  background-color: var(--light-bg);
+}
+
+.grid-proyectos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  background: var(--white);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 30px;
+  border: 1px solid #e2e8f0;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+  color: var(--dark-bg);
+  margin-bottom: 15px;
+  font-size: 1.25rem;
+}
+
+/* =========================================
+   6. SECCIÓN CONTACTO
+   ========================================= */
+.contact-container {
+  max-width: 600px;
+  text-align: center;
+}
+
+.contact-intro {
+  margin-bottom: 30px;
+}
+
+.contact-form {
+  text-align: left;
+  background: var(--white);
+  padding: 30px;
+  border-radius: var(--border-radius);
+  border: 1px solid #e2e8f0;
+  box-shadow: var(--box-shadow);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--dark-bg);
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: var(--border-radius);
+  font-family: inherit;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.full-width {
+  width: 100%;
+  font-size: 1rem;
+}
+
+/* =========================================
+   7. FOOTER
+   ========================================= */
+.site-footer {
+  background-color: var(--dark-bg);
+  color: #94a3b8;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.redes-sociales {
+  display: flex;
+  gap: 20px;
+}
+
+.redes-sociales a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.redes-sociales a:hover {
+  color: var(--primary-color);
+}
+
+/* =========================================
+   8. RESPONSIVE (Móvil)
+   ========================================= */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .main-nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,82 +1,141 @@
 <!DOCTYPE html>
-<html lang="es"
-    line-height: 1.15;
-    -webkit-text-size-adjust: 100%;>
+<html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Portafolio personal de Guillermo, estudiante de FP Superior en desarrollo web">
-<meta name="author" content="Guillermo Encinas Romera">
-<meta name="keywords" content="portafolio, estudiante, FP Superior, desarrollo web, HTML, CSS">
-
-  <link rel="stylesheet" href="styles.css">
-  <title>Mi Proyecto</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portafolio personal de Guillermo Encinas Romera, estudiante de FP Superior ASIR y Ciberseguridad.">
+    <meta name="author" content="Guillermo Encinas Romera">
+    <meta name="keywords" content="portafolio, estudiante, ASIR, ciberseguridad, desarrollo web, HTML, CSS">
+    
+    <title>Portafolio | Guillermo Encinas</title>
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    
 </head>
 <body>
-   <header><h1>Guillermo Encinas Romera</h1>
-        <nav>
-          <ul>
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#sobre-mi">Sobre mí</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-            <li><a href="#proyectos">Proyectos</a></li>
-          </ul>
-        </nav>
-      </header>
-  <main>
-    <div class="contenedor">
-      <section id="sobre-mi">
-        <h2>Sobre mí</h2>
-        <p>Soy estudiante de FP Superior especializado cyberseguridad. Me apasiona aprender nuevas tecnologías y trabajar en proyectos que combinan creatividad y funcionalidad para la web moderna.</p>
-      </section>
-      <section id="proyectos">
-  <h2>Mis proyectos</h2>
-  <div class="grid-proyectos">
-    <div class="proyecto">
-      <h3>Blog personal</h3>
-      <p>Proyecto creado con HTML y CSS para compartir artículos técnicos y personales. Busco siempre un diseño claro y accesible.</p>
-    </div>
-    <div class="proyecto">
-      <h3>Tienda online</h3>
-      <p>Plantilla básica de tienda con productos distribuidos mediante CSS Grid. Diseño adaptable y fácil de usar.</p>
-    </div>
-    <div class="proyecto">
-      <h3>Galería de fotografía</h3>
-      <p>Exposición digital de fotos donde trabajo la disposición con Flexbox y efectos de transición suaves.</p>
-    </div>
-    <div class="proyecto">
-      <h3>Formulario de contacto</h3>
-      <p>Página sencilla con formulario para contactar, enfatizando la experiencia de usuario y accesibilidad.</p>
-    </div>
-  </div>
-</section>
-      <section id="contacto">
-          <form>
-   <label for="nombre">Nombre:</label>
-<input type="text" id="nombre" name="nombre" required/>
-<label for="apellido">Apellido:</label>
-<input type="text" name="apellido" id="apellido" required>
-<label for="email">Correo electrónico:</label>
-<input type="email" name="email" id="email" required>
-<label for="mensaje">Mensaje:</label>
-<textarea id="mensaje" name="mensaje" rows="4"></textarea>
-<button type="submit">Enviar</button>
-  </form>
-      </section>
-        <section id="inicio">
-        <h2>Bienvenido a mi portafolio</h2>
-        <p>Mi nombre es Guillermo Encinas Romera, estudiante de FP Superior ASIR, en el centro de Prometeo. Aquí podrás explorar mis proyectos y contactarme.</p>
-       <button onclick="location.href='#proyectos'" type="button">Ver mis proyectos</button>
-      </section>
-      <footer>
-        <p>© 2025 Guillermo Encinas Romera. Todos los derechos reservados.</p>
-        <div class="redes-sociales">
-          <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
-          <a href="https://github.com" target="_blank">GitHub</a>
-          <a href="https://www.instagram.com" target="_blank">Instagram</a>  
+
+    <header class="site-header">
+        <div class="container header-content">
+            <div class="logo">Guillermo E.</div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#sobre-mi">Sobre mí</a></li>
+                    <li><a href="#proyectos">Proyectos</a></li>
+                    <li><a href="#contacto" class="btn-nav">Contacto</a></li>
+                </ul>
+            </nav>
         </div>
-      </footer>
-    </div>
-  </main>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero-section">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Bienvenido a mi portafolio</h1>
+                    <p class="hero-text">Mi nombre es <strong>Guillermo Encinas Romera</strong>, estudiante de FP Superior ASIR en el centro Prometeo. Aquí podrás explorar mis proyectos y contactarme.</p>
+                    <div class="hero-buttons">
+                        <a href="#proyectos" class="btn btn-primary">Ver mis proyectos</a>
+                        <a href="#contacto" class="btn btn-outline">Hablemos</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre-mi" class="section-padding">
+            <div class="container">
+                <h2 class="section-title">Sobre mí</h2>
+                <div class="about-content">
+                    <p>Soy estudiante de FP Superior especializado en <strong>ciberseguridad</strong>. Me apasiona aprender nuevas tecnologías y trabajar en proyectos que combinan creatividad y funcionalidad para la web moderna, asegurando siempre las mejores prácticas.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="proyectos" class="section-padding bg-light">
+            <div class="container">
+                <h2 class="section-title">Mis proyectos</h2>
+                <div class="grid-proyectos">
+                    <article class="card proyecto">
+                        <div class="card-content">
+                            <h3>Blog personal</h3>
+                            <p>Proyecto creado con HTML y CSS para compartir artículos técnicos y personales. Busco siempre un diseño claro y accesible.</p>
+                        </div>
+                    </article>
+                    
+                    <article class="card proyecto">
+                        <div class="card-content">
+                            <h3>Tienda online</h3>
+                            <p>Plantilla básica de tienda con productos distribuidos mediante CSS Grid. Diseño adaptable y fácil de usar.</p>
+                        </div>
+                    </article>
+                    
+                    <article class="card proyecto">
+                        <div class="card-content">
+                            <h3>Galería de fotografía</h3>
+                            <p>Exposición digital de fotos donde trabajo la disposición con Flexbox y efectos de transición suaves.</p>
+                        </div>
+                    </article>
+                    
+                    <article class="card proyecto">
+                        <div class="card-content">
+                            <h3>Formulario de contacto</h3>
+                            <p>Página sencilla con formulario para contactar, enfatizando la experiencia de usuario y accesibilidad.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="section-padding">
+            <div class="container contact-container">
+                <h2 class="section-title">Contacto</h2>
+                <p class="contact-intro">¿Tienes alguna propuesta o duda? Rellena el formulario:</p>
+                
+                <form class="contact-form" action="#" method="POST">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="apellido">Apellido</label>
+                            <input type="text" id="apellido" name="apellido" placeholder="Tu apellido" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Correo electrónico</label>
+                        <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary full-width">Enviar mensaje</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <div class="footer-info">
+                <p>© 2025 Guillermo Encinas Romera.</p>
+                <p>Todos los derechos reservados.</p>
+            </div>
+            <div class="redes-sociales">
+                <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
 </body>
 </html>
